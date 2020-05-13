@@ -16,7 +16,16 @@ public class Loan {
 		
 		//int numOfEMI = scan.nextInt();
 		
-		EMI emi = new EMI(principalAmt, numOfEMI);
-		emi.showDetails();
+		//Principal Amoount less than 1 is considered as invalid
+		if(principalAmt < 1) {
+			System.out.println("Please enter the valid principal amount.");
+		}
+		//numOfEMI should be >= 1
+		else if(numOfEMI < 1) {
+			System.out.println("Please enter the valid number of EMIs.");
+		}else {
+			EMI emi = new EMI(principalAmt, numOfEMI);
+			emi.showDetails();
+		}
 	}
 }
