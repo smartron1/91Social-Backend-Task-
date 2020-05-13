@@ -8,7 +8,11 @@ import loan.EMIDetails;
 //EMI Class to create instance of EMI Disbursement
 public class EMI {
 	
+	//Rate of interest is set to 1% to match the calculations in the sample output file
+	//Change the value of variable 'interest' to change the interest rate.
 	static float interest = 1;
+	
+	
 	float principalAmt;
 	LocalDate dateOfCreation = LocalDate.now();
     int numOfEMI;
