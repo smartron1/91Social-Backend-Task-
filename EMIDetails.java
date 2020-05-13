@@ -20,12 +20,21 @@ public class EMIDetails {
 	}
 	
 	//Separate show method to print the variables.
+	//Note : Values <= 1 are considered as negligible.
 	public void show() {
 		
-		System.out.println(emiNo+". EMI No : "+this.emiNo+", Principal EMI : "+this.principalEMI
-							+", Interest EMI = "+this.interestEMI+", Total EMI = "
-				+(this.principalEMI+this.interestEMI)+", EMI Date = "+this.dateOfEMI+", "
-						+ "Principal remaining : "+this.principalRem);
+		if(this.principalRem <= 1) {
+			System.out.println(emiNo+". EMI No : "+this.emiNo+", Principal EMI : "+this.principalEMI
+					+", Interest EMI = "+this.interestEMI+", Total EMI = "
+			+(this.principalEMI+this.interestEMI)+", EMI Date = "+this.dateOfEMI+", "
+					+ "Principal remaining : "+"~0");
+		}else {
+			System.out.println(emiNo+". EMI No : "+this.emiNo+", Principal EMI : "+this.principalEMI
+						+", Interest EMI = "+this.interestEMI+", Total EMI = "
+			+(this.principalEMI+this.interestEMI)+", EMI Date = "+this.dateOfEMI+", "
+					+ "Principal remaining : "+this.principalRem);
+		}
+		
 		
 	}
 
